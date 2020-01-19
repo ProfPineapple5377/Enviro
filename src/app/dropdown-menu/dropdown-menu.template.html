@@ -1,9 +1,9 @@
 <div class="dropdown-button">
-    <button mat-icon-button (tap)="openDropdown()">
+    <button mat-icon-button (tap)="toggleMenu()">
         <mat-icon>menu</mat-icon>
     </button>
 </div>
-<div class="menu">
+<div class="menu" *ngIf="isToggled">
     <button mat-icon-button>
         <mat-icon>info</mat-icon>
     </button>
