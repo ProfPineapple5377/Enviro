@@ -1,0 +1,10 @@
+.panel-wrapper{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 75vw;
+    margin-top: 5px;
+}

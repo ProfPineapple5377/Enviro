@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'enviro-app',
-  templateUrl: './enviro.component.html',
-  styleUrls: ['./enviro.component.css']
+  templateUrl: './enviro.template.html',
+  styleUrls: ['./enviro.style.css']
 })
 export class EnviroApp {
   data: any;
@@ -13,7 +13,7 @@ export class EnviroApp {
     this.fetchData(url)
       .then((response_data) => {
         this.data = response_data
-        console.log("For testing only")
+        console.log("For testing only");
         console.log(this.data);
     })
   }
