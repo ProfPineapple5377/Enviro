@@ -1,0 +1,14 @@
+<div class="header">
+    <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <div class="header-text">Enviro</div>
+    <button mat-icon-button>
+        <mat-icon>bug_report </mat-icon>
+    </button>
+</div>
+<div class="body">
+    <mat-form-field>
+        <input matInput #companyInput placeholder="Enter company name" (change)="parseData(companyInput.value)">
+    </mat-form-field>
+</div>
