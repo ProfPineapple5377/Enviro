@@ -2,11 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+
 //app component
 import { EnviroApp } from './enviro.component';
-//added components
 import { EnviroPanel } from './panel/panel.component';
+import { DropdownMenu } from './dropdown-menu/dropdown-menu.component'
 
+//angular animations
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //mat components
@@ -21,7 +23,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 @NgModule({
   declarations: [
     EnviroApp,
-    EnviroPanel
+    EnviroPanel,
+    DropdownMenu,
   ],
   imports: [
     BrowserModule,
