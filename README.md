@@ -9,5 +9,5 @@
 
 ## Run application
   npm i\
-  npm i -g polymer-cli\
-  polymer serve
+  npm install -g @angular/cli\
+  ng serve
