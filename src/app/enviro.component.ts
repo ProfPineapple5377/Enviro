@@ -34,3 +34,10 @@ export class EnviroApp {
     console.log(this.results);
   }
 }
+/*
+  Data sets backup:
+    https://data.cdp.net/resource/marp-zazk.json
+    https://data.cdp.net/resource/4hek-p74b.json
+    https://data.cdp.net/resource/5fxz-29mk.json
+    https://data.cdp.net/resource/tsqv-bik6.json
+*/
