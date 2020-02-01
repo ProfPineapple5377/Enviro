@@ -2,20 +2,34 @@
     **NOTE THIS COLOR SCHEME IS TEMP** want to make a working model before styleing
 </div>
 
-<div class="panel-wrapper" *ngFor="let company of company_info">
-    <div>
-        Company Name: {{company.company_name}}
-    </div>
-    <div>
-        Year Reported: {{company.reporting_year}}
-    </div>
-    <div>
-        Country Location: {{company.country}}
-    </div>
-    <div>
-        Rating: 
-        <span *ngIf="company.disclosure_score">{{company.disclosure_score}}%</span>
-        <span *ngIf="!company.disclosure_score">Not given</span>
-        
-    </div>
-</div>
+<table>
+    <tr class="table-header">
+        <th>
+            Company Name
+        </th>
+        <th>
+            Company Location
+        </th>
+        <th>
+            Year Reported
+        </th>
+        <th>
+            Rating
+        </th>
+    </tr>
+    <tr *ngFor="let company of company_info">
+        <td>
+            {{company.company_name}}
+        </td>
+        <td>
+            {{company.country}}
+        </td>
+        <td>
+            {{company.reporting_year}}
+        </td>
+        <td>
+            <span *ngIf="company.disclosure_score">{{company.disclosure_score}}%</span>
+            <span *ngIf="!company.disclosure_score">Not given</span>
+        </td>
+    </tr>
+</table>
