@@ -1,0 +1,32 @@
+<mat-table [dataSource]="data" class="mat-elevation-z8">
+    <!-- company name -->
+    <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>Company Name</mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{item.company_name}} </mat-cell>
+    </ng-container>
+
+    <!-- country -->
+    <ng-container matColumnDef="country">
+        <mat-header-cell *matHeaderCellDef>Country</mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{item.country}} </mat-cell>
+    </ng-container>
+
+    <!-- report year -->
+    <ng-container matColumnDef="reporting_year">
+        <mat-header-cell *matHeaderCellDef>Year Reported</mat-header-cell>
+        <mat-cell *matCellDef="let item">{{item.reporting_year}}</mat-cell>
+    </ng-container>
+
+    <!-- score -->
+    <ng-container matColumnDef="disclosure_score">
+        <mat-header-cell *matHeaderCellDef>Rating</mat-header-cell>
+        <mat-cell *matCellDef="let item">
+            <div *ngIf="item.disclosure_score">{{item.disclosure_score}}</div>
+            <div *ngIf="!item.disclosure_score">Not Provided</div>
+        </mat-cell>
+    </ng-container> 
+
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

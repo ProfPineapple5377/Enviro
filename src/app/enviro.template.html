@@ -1,12 +1,12 @@
 <div class="header">
     <dropdown-menu></dropdown-menu>
-    <div class="header-text">Enviro</div>
+    <div class="header-text"><img src="../assets/icons/favicon.png">Enviro</div>
 </div>
 <div class="body">
     <mat-form-field>
         <input matInput #companyInput placeholder="Enter company name" (change)="parseData(companyInput.value)">
     </mat-form-field>
     <div class="input-response" *ngIf="results">
-        <enviro-panel [company_info]="results"></enviro-panel>
+        <enviro-table [data]="results"></enviro-table>
     </div>
 </div>

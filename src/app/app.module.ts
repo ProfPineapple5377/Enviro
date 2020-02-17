@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 //app component
 import { EnviroApp } from './enviro.component';
-import { EnviroPanel } from './panel/panel.component';
 import { DropdownMenu } from './dropdown-menu/dropdown-menu.component'
+import { EnviroTable } from './enviro-table/enviro-table.component';
 
 //angular animations
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,8 +25,8 @@ import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     EnviroApp,
-    EnviroPanel,
     DropdownMenu,
+    EnviroTable
   ],
   imports: [
     BrowserModule,
