@@ -5,13 +5,13 @@
 </div>
 <div class="menu" *ngIf="isToggled">
     <button mat-icon-button>
-        <mat-icon>info</mat-icon>
+        <mat-icon (tap)="temp()">info</mat-icon>
     </button>
     
    
     <div>
         <button mat-icon-button>
-            <mat-icon>bug_report</mat-icon>
+            <mat-icon (tap)="temp()">bug_report</mat-icon>
         </button>
     </div>
 </div>

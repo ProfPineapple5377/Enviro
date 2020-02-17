@@ -12,4 +12,7 @@ export class DropdownMenu{
     toggleMenu(){
         this.isToggled = !this.isToggled;
     }
+    temp(){
+        alert("this is a work in progess we are slowly adding featues these buttons may not work now but will eventually")
+    }
 }
