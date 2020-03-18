@@ -7,20 +7,25 @@
     margin: 0 0 5px 0;
     padding: 5px;
     align-items: center;
+    justify-content: space-between;
     color: white;
 }
-.header-text{
+.enviro{
+    display: inline-flex;
+    height: 2.5em;
+    line-height: 40px;
+}
+.enviro>.text{
     font-size: 2em;
     color: white;
     font-weight: bold;
     display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
 }
-.header-text img{
-    width: 20px;
-    height: 20px;
+.enviro>.logo{
+    margin-right: 5px;
+    height: 100%
 }
+
 .body{
     display: flex;
     flex-direction: column;
