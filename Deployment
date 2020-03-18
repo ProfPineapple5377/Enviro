@@ -4,4 +4,4 @@ copy index.html and name it 404.html
 push
 
 
-ng build --prod --output-path docs --base-href /Enviro/
+ng build --prod --output-path docs --base-href https://pineapple5878.github.io/Enviro/
