@@ -3,4 +3,5 @@ ng build --prod --output-path docs --base-href Enviro
 copy index.html and name it 404.html
 push
 
-ng build --prod --base-href https://https://pineapple5878.github.io/Enviro/ --deploy-url=https://https://pineapple5878.github.io/Enviro/
+
+ng build --prod --output-path docs --base-href /Enviro/
