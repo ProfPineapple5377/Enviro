@@ -1,4 +1,0 @@
-https://alligator.io/angular/deploying-angular-app-github-pages/
-
-ng build --prod --base-href "Enviro"
-ngh
