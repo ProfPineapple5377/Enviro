@@ -1,0 +1,4 @@
+https://github.com/angular/angular-cli/wiki/stories-github-pages
+ng build --prod --output-path docs --base-href
+copy index.html and name it 404.html
+push
