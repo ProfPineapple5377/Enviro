@@ -1,5 +1,5 @@
 <div class="header">
-    <dropdown-menu></dropdown-menu>
+    <app-dropdown-menu></app-dropdown-menu>
     <div class="enviro">
         <img class="logo" src="assets/icons/logo/Enviro.jpg">
         <div class="text">Enviro</div>
@@ -13,6 +13,6 @@
         <input matInput #companyInput placeholder="Enter company name" (change)="parseData(companyInput.value)">
     </mat-form-field>
     <div class="input-response" *ngIf="results">
-        <enviro-table [data]="results"></enviro-table>
+        <app-enviro-table [data]="results"></app-enviro-table>
     </div>
 </div>

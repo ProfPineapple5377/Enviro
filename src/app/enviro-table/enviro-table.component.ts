@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
 
-export interface data_interface {
+// tslint:disable-next-line:class-name
+export interface data_inteface {
     company_name: string;
     country: string;
     reporting_year: string;
@@ -10,11 +11,11 @@ export interface data_interface {
 }
 
 @Component({
-    selector: 'enviro-table',
+    selector: 'app-enviro-table',
     templateUrl: './enviro-table.template.html',
     styleUrls: ['./enviro-table.style.css']
 })
-export class EnviroTable {
+export class EnviroTableComponent {
     @Input() data;
     displayedColumns: string[] = ['name', 'country', 'reporting_year', 'disclosure_score'];
 }
