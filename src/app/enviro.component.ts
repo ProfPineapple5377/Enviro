@@ -12,10 +12,10 @@ export class EnviroApp {
     let url = "https://data.cdp.net/resource/marp-zazk.json";
     this.fetchData(url)
       .then((response_data) => {
-        this.data = response_data
-        console.log("For testing only");
+        this.data = response_data;
+        console.log('For testing only');
         console.log(this.data);
-    })
+    });
   }
   fetchData(url){
     return fetch(url)
@@ -45,6 +45,6 @@ export class EnviroApp {
     link: https://data.cdp.net/Companies/2014-Forests-Risk-Assessment/5fxz-29mk
         api: https://data.cdp.net/resource/5fxz-29mk.json
 
-    link: 
+    link:
         api: https://data.cdp.net/resource/tsqv-bik6.json
 */

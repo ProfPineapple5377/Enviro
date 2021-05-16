@@ -1,5 +1,5 @@
 https://github.com/angular/angular-cli/wiki/stories-github-pages
 
-ng build --prod --output-path docs --base-href https://pineapple5878.github.io/Enviro/
+ng build --prod --output-path docs --base-href https://profpineapple5377.github.io/Enviro/
 copy index.html and name it 404.html
 push
