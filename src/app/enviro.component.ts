@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MatIconRegistry} from '@angular/material';
 
 @Component({
   selector: 'app-enviro',
@@ -33,6 +34,10 @@ export class EnviroAppComponent {
     this.results = this.data.filter(item => item.company_name.toLowerCase().includes(value.toLowerCase()));
     console.log('results');
     console.log(this.results);
+  }
+
+  githubLink() {
+    window.open('https://github.com/ProfPineapple5377/Enviro');
   }
 }
 /*

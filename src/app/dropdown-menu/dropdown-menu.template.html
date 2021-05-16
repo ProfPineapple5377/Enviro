@@ -1,17 +1,10 @@
 <div class="dropdown-button">
-    <button mat-icon-button (tap)="toggleMenu()">
-        <mat-icon>menu</mat-icon>
+    <button mat-icon-button class="mat-icon-button" (tap)="toggleMenu()">
+        <mat-icon class="mat-icon">menu</mat-icon>
     </button>
 </div>
 <div class="menu" *ngIf="isToggled">
-    <button mat-icon-button>
-        <mat-icon (tap)="temp()">info</mat-icon>
+    <button mat-icon-button class="mat-icon-button">
+        <mat-icon class="mat-icon" (tap)="temp()">info</mat-icon>
     </button>
-    
-   
-    <div>
-        <button mat-icon-button>
-            <mat-icon (tap)="temp()">bug_report</mat-icon>
-        </button>
-    </div>
 </div>

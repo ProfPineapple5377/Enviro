@@ -1,16 +1,23 @@
 <div class="header">
-    <app-dropdown-menu></app-dropdown-menu>
+  <div>
+    <button mat-icon-button class="mat-icon-button" (click)="githubLink()">
+      <img class="mat-icon" src="assets/icons/github.svg" alt="Github logo">
+    </button>
+  </div>
     <div class="enviro">
-        <img class="logo" src="assets/icons/logo/Enviro.jpg">
+        <img class="logo" src="assets/icons/logo/Enviro.jpg" alt="Enviro logo">
         <div class="text">Enviro</div>
     </div>
-    <div style="height: 40px; width: 40px;">
-        <!-- placeholderwill add later -->
-    </div>
+  <div>
+    <app-dropdown-menu></app-dropdown-menu>
+  </div>
+
 </div>
 <div class="body">
     <mat-form-field>
+      <label>
         <input matInput #companyInput placeholder="Enter company name" (change)="parseData(companyInput.value)">
+      </label>
     </mat-form-field>
     <div class="input-response" *ngIf="results">
         <app-enviro-table [data]="results"></app-enviro-table>
