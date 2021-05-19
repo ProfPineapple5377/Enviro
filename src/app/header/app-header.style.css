@@ -1,0 +1,38 @@
+.header-wrapper{
+  width:100%;
+}
+.light-gray{
+  fill: #bababa;
+  color: #bababa;
+}
+.mat-icon-button{
+  height: 7vh !important;
+  width: 7vh !important;
+}
+.mat-icon{
+  height: 6vh !important;
+  width: 6vh !important;
+}
+mat-toolbar{
+  background: #434945;
+  /*temp*/
+  margin-bottom: 25px;
+}
+
+.enviro {
+  display: inline-flex;
+  height: 2.5em;
+  line-height: 40px;
+  margin-left: 1em;
+}
+.enviro>.text{
+  font-size: 2em;
+  font-weight: bold;
+  display: inline-block;
+  margin:auto;
+}
+.enviro>.logo{
+  margin-right: 5px;
+  height: 100%
+}
+
