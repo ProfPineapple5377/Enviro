@@ -5,6 +5,9 @@
   fill: #bababa;
   color: #bababa;
 }
+mat-toolbar{
+  margin-bottom: 0 !important;
+}
 .mat-icon-button{
   height: 7vh !important;
   width: 7vh !important;
