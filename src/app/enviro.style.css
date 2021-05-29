@@ -1,39 +1,3 @@
-.header{
-    display: flex;
-    flex-direction: row;
-    position: sticky;
-    background: #616161;
-    height: 10vh;
-    margin: 0 0 5px 0;
-    padding: 5px;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-}
-.mat-icon-button{
-  height: 7vh !important;
-  width: 7vh !important;
-}
-.mat-icon{
-  height: 6vh !important;
-  width: 6vh !important;
-}
-.enviro{
-    display: inline-flex;
-    height: 2.5em;
-    line-height: 40px;
-}
-.enviro>.text{
-    font-size: 2em;
-    color: white;
-    font-weight: bold;
-    display: inline-block;
-}
-.enviro>.logo{
-    margin-right: 5px;
-    height: 100%
-}
-
 .body{
     display: flex;
     flex-direction: column;

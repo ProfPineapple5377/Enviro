@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { EnviroAppComponent } from './enviro.component';
 import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
 import { EnviroTableComponent } from './enviro-table/enviro-table.component';
+import { HeaderComponent} from './header/app-header.component';
 
 // angular animations
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +18,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTableModule} from '@angular/material/table';
+import {MatToolbarModule} from '@angular/material';
 
 
 
@@ -26,7 +28,8 @@ import {MatTableModule} from '@angular/material/table';
   declarations: [
     EnviroAppComponent,
     DropdownMenuComponent,
-    EnviroTableComponent
+    EnviroTableComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import {MatTableModule} from '@angular/material/table';
     MatButtonModule,
     MatInputModule,
     MatTooltipModule,
-    MatTableModule
+    MatTableModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [EnviroAppComponent]
