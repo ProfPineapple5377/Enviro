@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {MatIconRegistry} from '@angular/material';
 
 @Component({
   selector: 'app-enviro',
@@ -18,6 +17,32 @@ export class EnviroAppComponent {
         console.log('For testing only');
         console.log(this.data);
     });
+
+    // other data
+    this.fetchData('https://data.cdp.net/resource/4hek-p74b.json')
+      // tslint:disable-next-line:variable-name
+      .then((response_data) => {
+        this.data = response_data;
+        console.log('For testing only 2');
+        console.log(this.data);
+      });
+
+    this.fetchData('https://data.cdp.net/resource/5fxz-29mk.json')
+      // tslint:disable-next-line:variable-name
+      .then((response_data) => {
+        this.data = response_data;
+        console.log('For testing only 3');
+        console.log(this.data);
+      });
+
+    this.fetchData('https://data.cdp.net/resource/tsqv-bik6.json')
+      // tslint:disable-next-line:variable-name
+      .then((response_data) => {
+        this.data = response_data;
+        console.log('For testing only 4');
+        console.log(this.data);
+      });
+
   }
   fetchData(url) {
     return fetch(url)
