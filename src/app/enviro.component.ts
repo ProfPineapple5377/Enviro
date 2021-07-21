@@ -1,70 +1,103 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+
+// tslint:disable-next-line:class-name
+class company_result {
+  private accountID: string;
+  private name: string;
+  private country: string;
+  private reportYear: string;
+  private responseStatus: string;
+  private rating: string;
+
+  constructor(accountID: string, name: string, country: string, reportYear: string, responseStatus: string, rating: string) {
+    this.accountID = accountID;
+    this.name = name;
+    this.country = country;
+    this.reportYear = reportYear;
+    this.responseStatus = responseStatus;
+    this.rating = rating;
+  }
+
+  getID() {
+    return this.accountID;
+  }
+
+  getName() {
+    return this.name;
+  }
+}
 
 @Component({
   selector: 'app-enviro',
   templateUrl: './enviro.template.html',
   styleUrls: ['./enviro.style.css']
 })
+
 export class EnviroAppComponent {
-  data: any;
-  results: any;
+  data: Array<{id: string, name: string, value: Array<company_result>}>;
   constructor() {
-    const url = 'https://data.cdp.net/resource/marp-zazk.json';
-    this.fetchData(url)
-      // tslint:disable-next-line:variable-name
-      .then((response_data) => {
-        this.data = response_data;
-        console.log('For testing only');
-        console.log(this.data);
+    this.data = new Array<{id: string; name: string; value: Array<company_result>}>();
+    const urlList = [
+      'https://data.cdp.net/resource/marp-zazk.json',
+      'https://data.cdp.net/resource/4hek-p74b.json',
+    ];
+    // 'https://data.cdp.net/resource/5fxz-29mk.json'
+    urlList.forEach(url => {
+      this.fetchData(url)
+        // tslint:disable-next-line:variable-name
+        .then((response_data) => {
+          response_data.forEach(o => {
+            this.appendData(new company_result(
+                o.account_number,
+                o.company_name,
+                o.country,
+                o.reporting_year,
+                o.response_status,
+                o.performance_band
+              )
+            );
+          });
+        });
     });
-
-    // other data
-    this.fetchData('https://data.cdp.net/resource/4hek-p74b.json')
-      // tslint:disable-next-line:variable-name
-      .then((response_data) => {
-        this.data = response_data;
-        console.log('For testing only 2');
-        console.log(this.data);
-      });
-
-    this.fetchData('https://data.cdp.net/resource/5fxz-29mk.json')
-      // tslint:disable-next-line:variable-name
-      .then((response_data) => {
-        this.data = response_data;
-        console.log('For testing only 3');
-        console.log(this.data);
-      });
-
-    this.fetchData('https://data.cdp.net/resource/tsqv-bik6.json')
-      // tslint:disable-next-line:variable-name
-      .then((response_data) => {
-        this.data = response_data;
-        console.log('For testing only 4');
-        console.log(this.data);
-      });
-
+    console.log(this.data);
   }
+
   fetchData(url) {
     return fetch(url)
-        .then(response => response.json())
-            .then(async result => {
-                return result;
-            });
+      .then(response => response.json())
+      .then(async result => {
+        return await result;
+      });
   }
-  parseData(value: string) {
-    if (!value) {
-        console.warn('no input given');
-        return;
+
+  appendData(value: company_result) {
+    let res = this.data.find(i => i.id === value.getID());
+    if (res === undefined) {
+      this.data.push({id: value.getID(), name: value.getName(), value: [value]});
+    } else {
+      res.value.push(value);
     }
-    this.results = this.data.filter(item => item.company_name.toLowerCase().includes(value.toLowerCase()));
+
+  }
+
+  parseData(value: string) {
+    /*
+    if (!value) {
+      console.warn('no input given');
+      return;
+    }
+    //this.results = this.data.filter(item => item.company_name.toLowerCase().includes(value.toLowerCase()));
     console.log('results');
     console.log(this.results);
+
+     */
   }
 
   githubLink() {
     window.open('https://github.com/ProfPineapple5377/Enviro');
   }
 }
+
 /*
   Data sets backup:
     link: https://data.cdp.net/Companies/2013-Global-500-Emissions-and-Response-Status/marp-zazk
