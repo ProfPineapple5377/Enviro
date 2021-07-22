@@ -34,6 +34,7 @@ class company_result {
 })
 
 export class EnviroAppComponent {
+  results: any;
   data: Array<{id: string, name: string, value: Array<company_result>}>;
   constructor() {
     this.data = new Array<{id: string; name: string; value: Array<company_result>}>();
@@ -71,26 +72,27 @@ export class EnviroAppComponent {
   }
 
   appendData(value: company_result) {
-    let res = this.data.find(i => i.id === value.getID());
+    const res = this.data.find(i => i.id === value.getID());
     if (res === undefined) {
       this.data.push({id: value.getID(), name: value.getName(), value: [value]});
     } else {
       res.value.push(value);
     }
-
   }
 
   parseData(value: string) {
-    /*
     if (!value) {
       console.warn('no input given');
       return;
     }
-    //this.results = this.data.filter(item => item.company_name.toLowerCase().includes(value.toLowerCase()));
+    this.results = new Array<company_result>();
+    this.data.filter(item => item.name.toLowerCase().includes(value.toLowerCase())).forEach(i => {
+      i.value.forEach(j => {
+        this.results.push(j);
+      });
+    });
     console.log('results');
     console.log(this.results);
-
-     */
   }
 
   githubLink() {
