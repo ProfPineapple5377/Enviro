@@ -18,7 +18,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTableModule} from '@angular/material/table';
-import {MatToolbarModule} from '@angular/material';
+import {MatCardModule, MatToolbarModule} from '@angular/material';
+import { EnviroSourcesComponent } from './sources/enviro-sources/enviro-sources.component';
 
 
 
@@ -30,19 +31,21 @@ import {MatToolbarModule} from '@angular/material';
     DropdownMenuComponent,
     EnviroTableComponent,
     EnviroDataTableComponent,
-    HeaderComponent
+    HeaderComponent,
+    EnviroSourcesComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatIconModule,
-    MatButtonModule,
-    MatInputModule,
-    MatTooltipModule,
-    MatTableModule,
-    MatToolbarModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatIconModule,
+        MatButtonModule,
+        MatInputModule,
+        MatTooltipModule,
+        MatTableModule,
+        MatToolbarModule,
+        MatCardModule
+    ],
   providers: [],
   bootstrap: [EnviroAppComponent]
 })
