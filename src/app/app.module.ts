@@ -8,6 +8,7 @@ import { EnviroAppComponent } from './enviro.component';
 import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
 import { EnviroTableComponent } from './enviro-table/enviro-table.component';
 import { HeaderComponent} from './header/app-header.component';
+import {EnviroDataTableComponent} from './enviro-table/data/enviro-data-table.component';
 // angular animations
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -28,6 +29,7 @@ import {MatToolbarModule} from '@angular/material';
     EnviroAppComponent,
     DropdownMenuComponent,
     EnviroTableComponent,
+    EnviroDataTableComponent,
     HeaderComponent
   ],
   imports: [
