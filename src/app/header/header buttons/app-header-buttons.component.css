@@ -5,3 +5,6 @@
 .button-wrapper>*:not(:last-child){
   margin-right: .5em;
 }
+.button-wrapper>*:first-child{
+  margin-left: 5px;
+}
