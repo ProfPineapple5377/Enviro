@@ -1,6 +1,10 @@
 .header-wrapper{
   width:100%;
 }
+.sources{
+  margin-left: auto;
+  margin-right: .5em;
+}
 .light-gray{
   fill: #bababa;
   color: #bababa;

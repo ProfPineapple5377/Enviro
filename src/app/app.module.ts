@@ -21,8 +21,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTableModule} from '@angular/material/table';
 import {MatCardModule, MatToolbarModule} from '@angular/material';
-import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
-import { AppHeaderButtonsComponent } from './header/header buttons/app-header-buttons.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 // add components into declarations
@@ -34,8 +33,7 @@ import { AppHeaderButtonsComponent } from './header/header buttons/app-header-bu
     EnviroDataTableComponent,
     HeaderComponent,
     EnviroSourcesComponent,
-    EnviroSourceDialog,
-    AppHeaderButtonsComponent
+    EnviroSourceDialog
   ],
   imports: [
     BrowserModule,
