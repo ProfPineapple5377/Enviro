@@ -3,3 +3,6 @@
   margin-right: 3em;
   margin-left: 3em;
 }
+::ng-deep .mat-tooltip{
+  margin-top: 10px !important;
+}

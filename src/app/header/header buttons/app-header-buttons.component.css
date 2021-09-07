@@ -1,0 +1,7 @@
+.button-wrapper{
+  display: flex;
+  flex-direction: row;
+}
+.button-wrapper>*:not(:last-child){
+  margin-right: .5em;
+}
