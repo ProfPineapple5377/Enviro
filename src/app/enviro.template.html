@@ -2,12 +2,5 @@
   <app-header></app-header>
 </div>
 <div class="body">
-    <mat-form-field>
-      <label>
-        <input matInput #companyInput placeholder="Enter company name" (change)="parseData(companyInput.value)">
-      </label>
-    </mat-form-field>
-    <div class="input-response" *ngIf="results">
-        <app-enviro-table [data]="results"></app-enviro-table>
-    </div>
+  <router-outlet></router-outlet>
 </div>

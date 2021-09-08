@@ -1,0 +1,8 @@
+.body{
+  margin-top:2em;
+  margin-right: 3em;
+  margin-left: 3em;
+}
+::ng-deep .mat-tooltip{
+  margin: 20px 0 0 0!important;
+}

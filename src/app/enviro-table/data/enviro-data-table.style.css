@@ -1,0 +1,13 @@
+.body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+mat-form-field{
+  text-align: center;
+  width: 25%;
+}
+.input-response{
+  width: 80%;
+}

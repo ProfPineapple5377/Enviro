@@ -2,7 +2,7 @@
     <!-- company name -->
     <ng-container matColumnDef="name">
         <mat-header-cell *matHeaderCellDef>Company Name</mat-header-cell>
-        <mat-cell *matCellDef="let item"> {{item.company_name}} </mat-cell>
+        <mat-cell *matCellDef="let item"> {{item.name}} </mat-cell>
     </ng-container>
 
     <!-- country -->
@@ -14,17 +14,17 @@
     <!-- report year -->
     <ng-container matColumnDef="reporting_year">
         <mat-header-cell *matHeaderCellDef>Year Reported</mat-header-cell>
-        <mat-cell *matCellDef="let item">{{item.reporting_year}}</mat-cell>
+        <mat-cell *matCellDef="let item">{{item.reportYear}}</mat-cell>
     </ng-container>
 
     <!-- score -->
     <ng-container matColumnDef="disclosure_score">
         <mat-header-cell *matHeaderCellDef>Rating</mat-header-cell>
         <mat-cell *matCellDef="let item">
-            <div *ngIf="item.disclosure_score">{{item.disclosure_score}}</div>
-            <div *ngIf="!item.disclosure_score">Not Provided</div>
+            <div *ngIf="item.rating">{{item.rating}}</div>
+            <div *ngIf="!item.rating">Not Provided</div>
         </mat-cell>
-    </ng-container> 
+    </ng-container>
 
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

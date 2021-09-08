@@ -1,12 +1,17 @@
 .header-wrapper{
   width:100%;
 }
+.sources{
+  margin-left: auto;
+  margin-right: .5em;
+}
 .light-gray{
   fill: #bababa;
   color: #bababa;
 }
 mat-toolbar{
   margin-bottom: 0 !important;
+  padding-bottom: .5em;
 }
 .mat-icon-button{
   height: 7vh !important;
@@ -37,5 +42,11 @@ mat-toolbar{
 .enviro>.logo{
   margin-right: 5px;
   height: 100%
+}
+.routing-links{
+  height: 32px;
+}
+.routing-links>button:not(:last-child){
+  margin-right: .25em;
 }
 
