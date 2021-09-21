@@ -11,3 +11,9 @@
   npm i\
   npm install -g @angular/cli\
   ng serve
+
+# Sources
+  Our sourse file for most data sets and other works used are located here [here](src/app/sources/enviro-sources/enviro-sources-dialog.html). <br>
+  If there are any unsited work please create a github [issue](https://github.com/ProfPineapple5377/Enviro/issues) for use to correct this. <br>
+  If you wish for any of your work to be removed from this project please create a github [issue](https://github.com/ProfPineapple5377/Enviro/issues) for us to resolve it. <br>
+  
